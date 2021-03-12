@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
+<head><link rel="stylesheet" type="text/css" href="css3clock.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>Acc Luis Eduardo</title>
 <style type="text/css">
@@ -13,6 +13,368 @@ body {
 </style></head>
 
 <body>
-<div id="Layer1" style="position:absolute; left:311px; top:22px; width:472px; height:254px; z-index:1"><img src="gif1.gif" width="469" height="416"></div>
+<div id="liveclock" class="outer_face">
+
+<div class="marker oneseven"></div>
+<div class="marker twoeight"></div>
+<div class="marker fourten"></div>
+<div class="marker fiveeleven"></div>
+
+<div class="inner_face">
+<div class="hand hour"></div>
+<div class="hand minute"></div>
+<div class="hand second"></div>
+</div>
+
+</div>
+
+<div id="Layer2" style="position:absolute; left:830px; top:35px; width:268px; height:226px; z-index:2"><script>
+
+/*Current date script credit: 
+JavaScript Kit (www.javascriptkit.com)
+Over 200+ free scripts here!
+*/
+
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write("<small><font color='000000' face='Arial'><b>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</b></font></small>")
+
+</script>
+
+<p align="center">&nbsp;</p>
+</div>
+<div id="Layer3" style="position:absolute; left:827px; top:291px; width:278px; height:273px; z-index:3">
+  <p>
+    <script>
+<!--
+<!--Animated Window Opener script-By JavaScript Kit (www.javascriptkit.com) More scripts here-->
+var mylocation="http://www.google.com"
+var winheight=100
+var winsize=100
+var x=5
+
+function go(){
+win2=window.open("","","scrollbars")
+if (!document.layers&&!document.all){
+win2.location=mylocation
+return
+}
+win2.resizeTo(100,100)
+win2.moveTo(0,0)
+go2()
+}
+function go2(){
+if (winheight>=screen.availHeight-3)
+x=0
+win2.resizeBy(5,x)
+winheight+=5
+winsize+=5
+if (winsize>=screen.width-5){
+win2.location=mylocation
+winheight=100
+winsize=100
+x=5
+return
+}
+setTimeout("go2()",50)
+}
+//-->
+    </script> 
+  <script>
+<!--
+<!--Animated Window Opener script-By JavaScript Kit (www.javascriptkit.com) More scripts here-->
+var mylocation="http://www.google.com"
+var winheight=100
+var winsize=100
+var x=5
+
+function go(){
+win2=window.open("","","scrollbars")
+if (!document.layers&&!document.all){
+win2.location=mylocation
+return
+}
+win2.resizeTo(100,100)
+win2.moveTo(0,0)
+go2()
+}
+function go2(){
+if (winheight>=screen.availHeight-3)
+x=0
+win2.resizeBy(5,x)
+winheight+=5
+winsize+=5
+if (winsize>=screen.width-5){
+win2.location=mylocation
+winheight=100
+winsize=100
+x=5
+return
+}
+setTimeout("go2()",50)
+}
+//-->
+</script>
+<a href="javascript:go()" onMouseover="window.status='open window';return true" onMouseout="window.status=''" >buscador</a></p>
+</div>
+<div id="Layer4" style="position:absolute; left:15px; top:279px; width:293px; height:163px; z-index:4"><table border="0" width="350" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="gratis-png-ruleta-rusa-bala-camara-revolver-cilindro-ruleta.png" width="122" height="163"></td>
+    <td>
+
+<form name="fire">
+Load number of bullets (1-6):<br /><input name="bullets" type="text" size=3 value=1><br />
+
+<p>
+<input name="message" type="button" value="Play Roulette!" onClick="fireit()">
+</p>
+
+</form>
+
+<script>
+
+//Russian Roulette Game- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+function fireit(){
+var theone=Math.floor(Math.random()*6)
+
+if (theone<=document.fire.bullets.value-1)
+alert("Bang. You\'re dead!")
+else{
+document.fire.message.value="Whew. Got lucky!"
+setTimeout("document.fire.message.value='Play Roulette'",500)
+}
+}
+
+</script></td>
+  </tr>
+</table>
+</div>
+<div id="Layer5" style="position:absolute; left:79px; top:505px; width:188px; height:204px; z-index:5"><script>
+
+//Time of day message script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+var Digital=new Date()
+var hours=Digital.getHours()
+
+//Configure message below to your own.
+if (hours>=5&&hours<=11) //MESSAGE FOR MORNING
+document.write('<b>Welcome to our site. Good morning visitor.</b>')
+else if (hours==12) //MESSAGE FOR NOON
+document.write('<b>It is high noon. Thanks for dropping by!</b>')
+else if (hours>=13&&hours<=17) //MESSAGE FOR AFTERNOON
+document.write('<b>Good afternoon, and thanks for visiting.</b>')
+else if (hours>=18&&hours<=20) //MESSAGE FOR EVENING (6pm-8pm)
+document.write('<b>Good evening. Hope you\'re enjoying the gentle breeze</b>')
+else if (hours>=21&&hours<=11) //MESSAGE FOR NIGHT (9pm-11pm)
+document.write('<b>Glad to see you this time of the night.</b>')
+else //MESSAGE FOR LATE NIGHT, EARLY MORNING (12pm-4am)
+document.write('<b>Wow, thanks for choosing to visit our site over sleep!</b>')
+
+</script>
+
+<p>&nbsp;</p>
+</div>
+<div id="Layer6" style="position:absolute; left:373px; top:516px; width:264px; height:180px; z-index:6"><style>
+.counter{
+background-color:gray;
+color:orange;
+font-weight:bold;
+}
+</style>
+
+<SCRIPT>
+
+//Personal Counter- by Jaafar Bin Yusof, Singapore (jaafar66@yahoo.com)
+//Modified by JavaScript Kit (http://javascriptkit.com)
+//Visit http://javascriptkit.com for this script
+
+expireDate = new Date
+expireDate.setMonth(expireDate.getMonth()+6)
+jcount = eval(cookieVal("jaafarCounter"))
+jcount++
+document.cookie = "jaafarCounter="+jcount+";expires=" + expireDate.toGMTString()
+
+function cookieVal(cookieName) {
+thisCookie = document.cookie.split("; ")
+for (i=0; i<thisCookie.length; i++){
+	if (cookieName == thisCookie[i].split("=")[0]){
+		return thisCookie[i].split("=")[1]
+	}
+}
+return 0
+}
+
+function page_counter(){
+for (i=0;i<(7-jcount.toString().length);i++)
+document.write('<span class="counter">0</span>')
+for (y=0;y<(jcount.toString().length);y++)
+document.write('<span class="counter">'+jcount.toString().charAt(y)+'</span>')
+}
+
+</SCRIPT> 
+Contador de visitas a la pagina
+<SCRIPT>
+page_counter(jcount);
+</SCRIPT>
+</div>
+<div id="Layer7" style="position:absolute; left:732px; top:595px; width:239px; height:180px; z-index:7"><script type = "text/javascript">
+
+/***********************************************
+* Display time of last visit script- by JavaScriptKit.com
+* This notice MUST stay intact for use
+* Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and more
+***********************************************/
+
+var days = 730; // days until cookie expires = 2 years.
+var lastvisit=new Object();
+var firstvisitmsg="This is your first visit to this page. Welcome!"; 
+lastvisit.subsequentvisitmsg="Welcome back visitor! Your last visit was on <b>[displaydate]</b>";
+
+lastvisit.getCookie=function(Name){ 
+var re=new RegExp(Name+"=[^;]+", "i"); 
+if (document.cookie.match(re)) 
+return document.cookie.match(re)[0].split("=")[1];
+return''; 
+}
+
+lastvisit.setCookie=function(name, value, days){ 
+var expireDate = new Date();
+
+var expstring=expireDate.setDate(expireDate.getDate()+parseInt(days));
+document.cookie = name+"="+value+"; expires="+expireDate.toGMTString()+"; path=/";
+}
+
+lastvisit.showmessage = function() {
+var wh = new Date();
+if (lastvisit.getCookie("visitc") == "") { 
+lastvisit.setCookie("visitc", wh, days); 
+document.write(firstvisitmsg);
+}
+
+else {
+var lv = lastvisit.getCookie("visitc");
+var lvp = Date.parse(lv);
+var now = new Date();
+now.setTime(lvp);
+var day = new Array("Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat");
+var month = new Array ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+var dd = now.getDate();
+var dy = now.getDay();
+dy = day[dy];
+var mn = now.getMonth();
+mn = month[mn];
+yy = now.getFullYear();
+var hh = now.getHours();
+var ampm = "AM";
+if (hh >= 12) {ampm = "PM"}
+if (hh >12){hh = hh - 12};
+if (hh == 0) {hh = 12}
+if (hh < 10) {hh = "0" + hh};
+var mins = now.getMinutes();
+if (mins < 10) {mins = "0"+ mins}
+var secs = now.getSeconds();
+if (secs < 10) {secs = "0" + secs}
+var dispDate = dy + ", " + mn + " " + dd + ", " + yy + " " + hh + ":" + mins + ":" + secs + " " + ampm
+document.write(lastvisit.subsequentvisitmsg.replace("\[displaydate\]", dispDate))
+}
+
+lastvisit.setCookie("visitc", wh, days);
+
+}
+
+lastvisit.showmessage();
+
+</script></div>
+<div id="Layer8" style="position:absolute; left:328px; top:734px; width:170px; height:154px; z-index:8"><script src="jseyes.js">
+
+//Script created by Pintér Gábor, http://www.propix.hu
+//Visit http://javascriptkit.com for this script
+
+</script>
+
+<script>
+    jseyes();
+</script></div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+/***********************************************
+* CSS3 Analog Clock- by JavaScript Kit (www.javascriptkit.com)
+* Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and 100s more
+***********************************************/
+
+var $hands = $('#liveclock div.hand')
+
+window.requestAnimationFrame = window.requestAnimationFrame
+                               || window.mozRequestAnimationFrame
+                               || window.webkitRequestAnimationFrame
+                               || window.msRequestAnimationFrame
+                               || function(f){setTimeout(f, 60)}
+
+
+function updateclock(){
+	var curdate = new Date()
+	var hour_as_degree = ( curdate.getHours() + curdate.getMinutes()/60 ) / 12 * 360
+	var minute_as_degree = curdate.getMinutes() / 60 * 360
+	var second_as_degree = ( curdate.getSeconds() + curdate.getMilliseconds()/1000 ) /60 * 360
+	$hands.filter('.hour').css({transform: 'rotate(' + hour_as_degree + 'deg)' })
+	$hands.filter('.minute').css({transform: 'rotate(' + minute_as_degree + 'deg)' })
+	$hands.filter('.second').css({transform: 'rotate(' + second_as_degree + 'deg)' })
+	requestAnimationFrame(updateclock)
+}
+
+requestAnimationFrame(updateclock)
+
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+/***********************************************
+* CSS3 Analog Clock- by JavaScript Kit (www.javascriptkit.com)
+* Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and 100s more
+***********************************************/
+
+var $hands = $('#liveclock div.hand')
+
+window.requestAnimationFrame = window.requestAnimationFrame
+                               || window.mozRequestAnimationFrame
+                               || window.webkitRequestAnimationFrame
+                               || window.msRequestAnimationFrame
+                               || function(f){setTimeout(f, 60)}
+
+
+function updateclock(){
+	var curdate = new Date()
+	var hour_as_degree = ( curdate.getHours() + curdate.getMinutes()/60 ) / 12 * 360
+	var minute_as_degree = curdate.getMinutes() / 60 * 360
+	var second_as_degree = ( curdate.getSeconds() + curdate.getMilliseconds()/1000 ) /60 * 360
+	$hands.filter('.hour').css({transform: 'rotate(' + hour_as_degree + 'deg)' })
+	$hands.filter('.minute').css({transform: 'rotate(' + minute_as_degree + 'deg)' })
+	$hands.filter('.second').css({transform: 'rotate(' + second_as_degree + 'deg)' })
+	requestAnimationFrame(updateclock)
+}
+
+requestAnimationFrame(updateclock)
+
+
+</script>
+<div id="Layer1" style="position:absolute; left:325px; top:54px; width:69px; height:91px; z-index:1"><img src="gif1.gif" width="469" height="416"></div>
 </body>
 </html>
